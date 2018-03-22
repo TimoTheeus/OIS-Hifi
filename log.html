@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href= "style.css">
+    <title>Event Log</title>
+</head>
+<body>
+<header>
+    <img src="images/uu.png" alt="uu logo">
+    <div id = "userHeader">
+        <p>U bent ingelogd als: Kwintijn Schuurman <br>Departement: Informatiekunde</p>
+    </div>
+</header>
+<nav>
+    <ul>
+        <li><a href="overzicht.html">Overzicht Meeloopdagen</a></li>
+        <li><a class="active" href="log.html">Event Log</a></li>
+        <li><a href="archief.html">Archief</a></li>
+    </ul>
+</nav>
+<div id = "eventLogDiv">
+    <h2 id = "eventLogHeader">Event Log:</h2>
+    <div class = "hidden savedPopup" id = "savedPopup">☑ Changes Saved</div>
+    <table id = "bestaandeDagenTable">
+        <tr>
+            <th>Ongedaan maken</th>
+            <th>Datum en Tijd</th>
+            <th>Event</th>
+        </tr>
+        <tr>
+            <td style = "height: 20px; width:20px;">
+                <img class = "undoButton" src = "images/undoButton.png" height = "40" width ="40" alt = "undo button">
+            </td>
+            <td>
+                12-03-2018 12:18:10
+            </td>
+            <td>
+                ☑ Kwintijn Schuurman heeft meeloopdag Informatica 22-03-2018 aangepast.
+            </td>
+        </tr>
+        <tr>
+            <td style = "height: 20px; width:20px;">
+
+            </td>
+            <td>
+                11-03-2018 15:13:57
+            </td>
+            <td>
+                ☒ Systeem kon mail niet verzenden naar: Jelle de Vries. E-mail niet bereikbaar.
+            </td>
+        </tr>
+        <tr>
+            <td style = "height: 20px; width:20px;">
+                <img class = "undoButton" src = "images/undoButton.png" height = "40" width ="40" alt = "undo button">
+            </td>
+            <td>
+                10-03-2018 12:00:15
+            </td>
+            <td>
+                ☑ Kwintijn Schuurman heeft meeloopdag Informatica 20-03-2018 toegevoegd.
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

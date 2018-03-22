@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href= "style.css">
+    <title>Archief</title>
+</head>
+<body>
+<header>
+    <img src="images/uu.png" alt="uu logo">
+    <div id = "userHeader">
+        <p>U bent ingelogd als: Kwintijn Schuurman <br>Departement: Informatiekunde</p>
+    </div>
+</header>
+<nav>
+    <ul>
+        <li><a href="overzicht.html">Overzicht Meeloopdagen</a></li>
+        <li><a href="log.html">Event Log</a></li>
+        <li><a class="active" href="archief.html">Archief</a></li>
+    </ul>
+</nav>
+<div id = "eventLogDiv">
+    <h2 id = "eventLogHeader">Geschiedenis meeloopdagen:</h2>
+    <div class = "hidden savedPopup" id = "savedPopup">☑ Changes Saved</div>
+    <table id = "bestaandeDagenTable">
+        <tr>
+            <th>Datum</th>
+            <th>Beschrijving</th>
+        </tr>
+        <tr>
+            <td>
+                03-12-2017
+            </td>
+            <td>
+                Meeloopdag informatiekunde met 20 aanmeldingen.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                01-09-2017
+            </td>
+            <td>
+                Meeloopdag informatiekunde met 18 aanmeldingen.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                20-04-2017
+            </td>
+            <td>
+                Meeloopdag informatiekunde met 21 aanmeldingen.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                10-04-2017
+            </td>
+            <td>
+                Meeloopdag informatiekunde met 23 aanmeldingen.
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

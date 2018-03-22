@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href= "style.css">
+    <title>Overzicht Meeloopdagen</title>
+  </head>
+  <body>
+    <header>
+      <img src="images/uu.png" alt="uu logo">
+      <div id = "userHeader">
+        <p>U bent ingelogd als: Kwintijn Schuurman <br>Departement: Informatiekunde</p>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li><a class="active" href="overzicht.html">Overzicht Meeloopdagen</a></li>
+        <li><a href="log.html">Event Log</a></li>
+        <li><a href="archief.html">Archief</a></li>
+      </ul>
+    </nav>
+    <div id = "meeloopdagDiv">
+    <button id = "meeloopdagButton">
+      Nieuwe meeloopdag aanmaken
+    </button>
+      <table class = "hidden" id = "meeloopdagTable">
+        <tr>
+          <td><select name = "opleidingen"><option value = "Informatiekunde">Informatiekunde</option></select></td>
+          <td><input type = "date" required></td>
+          <td><input type = "number" placeholder="mailingsperiode (dagen)" ></td>
+          <td><input type = "number" placeholder="sluitingsperiode (dagen)" ></td>
+          <td><input type = "number" placeholder="herinneringsperiode (dagen)" ></td>
+          <td><input type = "number" placeholder="max inschrijvingen" ></td>
+          <td id = "saveElement"><button id= "saveButton">Opslaan</button></td>
+        </tr>
+      </table>
+    </div>
+    <div id = "bestaandeDagenDiv">
+    <h2 id = "bestaandeDagenHeader">Bestaande meeloopdagen:</h2>
+      <div class = "hidden savedPopup" id = "savedPopup">☑ Changes Saved</div>
+      <table id = "bestaandeDagenTable">
+        <tr>
+          <th>Opleiding</th>
+          <th>Datum</th>
+          <th>Mailingsperiode</th>
+          <th>Sluitingsperiode</th>
+          <th>Herinneringsperiode</th>
+          <th>Maximum inschrijvingen</th>
+        </tr>
+        <tr>
+          <td><select name = "opleidingen"><option value = "Informatiekunde">Informatiekunde</option></select></td>
+          <td><input type = "date" value ="2018-02-22"></td>
+          <td><input type = "number" value = "7"></td>
+          <td><input type = "number" value = "3"></td>
+          <td><input type = "number" value = "3"></td>
+          <td><input type = "number" value = "25"></td>
+        </tr>
+        <tr>
+          <td><select name = "opleidingen"><option value = "Informatiekunde">Informatiekunde</option></select></td>
+          <td><input type = "date" value ="2018-03-05"></td>
+          <td><input type = "number" value = "14"></td>
+          <td><input type = "number" value = "5"></td>
+          <td><input type = "number" value = "3"></td>
+          <td><input type = "number" value = "15"></td>
+        </tr>
+        <tr>
+          <td><select name = "opleidingen"><option value = "Informatiekunde">Informatiekunde</option></select></td>
+          <td><input type = "date" value ="2018-03-06"></td>
+          <td><input type = "number" value = "14"></td>
+          <td><input type = "number" value = "5"></td>
+          <td><input type = "number" value = "3"></td>
+          <td><input type = "number" value = "12"></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
