@@ -7,7 +7,7 @@ header {
 }
 
 body {
-    overflow-x:hidden;
+    
 }
 nav {
     position: sticky;
@@ -135,10 +135,22 @@ aside {
 #mailWindow{
     position:absolute;
 }
+#newMailWindow{
+    position:absolute;
+}
 #saveMailButton{
     display:block;
 }
 .savedPopup{
+    right:50%;
+    display:inline;
+    position:absolute;
+    font-size: 30px;
+    top:30px;
+    border: 1px solid black;
+    background-color: limegreen;
+}
+.sentPopup{
     right:50%;
     display:inline;
     position:absolute;

@@ -12,11 +12,27 @@ $(function() {
             },2000);
         }
     });
-    $(".editButton").on('click',function(e){
+    $("#sendMailButton").on('click',function(){
+        $("#newMailWindow").toggleClass("hidden");
+        if($('.sentPopup').hasClass("hidden")) {
+            $('.sentPopup').toggleClass("hidden");
+            setTimeout(function(){
+                document.getElementById("sentPopup").className+= " hidden";
+            },2000);
+        }
+    });
+    $(document).on('click','.editButton',function(e){
         if($("#mailWindow").hasClass("hidden")) {
             $("#mailWindow").toggleClass("hidden");
             document.getElementById("mailWindow").style.left = e.clientX + 'px';
             document.getElementById("mailWindow").style.top = e.clientY + 'px';
+        }
+    });
+    $(document).on('click','.mailButton',function(e){
+        if($("#newMailWindow").hasClass("hidden")) {
+            $("#newMailWindow").toggleClass("hidden");
+            document.getElementById("newMailWindow").style.left = e.clientX + 'px';
+            document.getElementById("newMailWindow").style.top = e.clientY + 'px';
         }
     });
     document.getElementById("saveButton").onclick = function () {
@@ -31,6 +47,20 @@ $(function() {
             var clone = td.cloneNode(true);
             tr.appendChild(clone);
         }
+        //add mail buttons
+        var editButton = document.createElement('button');
+        editButton.className+="editButton";
+        editButton.append("Bewerk");
+        var td = document.createElement('td');
+        td.appendChild(editButton);
+        tr.appendChild(td);
+        var mailButton = document.createElement('button');
+        mailButton.className+="mailButton";
+        mailButton.append("Maak mail");
+        var td = document.createElement('td');
+        td.appendChild(mailButton);
+        tr.appendChild(td);
+
         tr.className+= "success";
         setTimeout(function(){
             tr.classList.remove("success");
@@ -39,6 +69,9 @@ $(function() {
         $("#meeloopdagTable").toggleClass("hidden");
         if($('.savedPopup').hasClass("hidden")){
             $('.savedPopup').toggleClass("hidden");
+            setTimeout(function(){
+                document.getElementById("savedPopup").className+= " hidden";
+            },1500);
         }
     }
     document.onclick = function (e) {

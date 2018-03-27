@@ -39,7 +39,8 @@
     </div>
     <div id = "bestaandeDagenDiv">
     <h2 id = "bestaandeDagenHeader">Bestaande meeloopdagen:</h2>
-      <div class = "savedPopup hidden" id = "savedPopup">☑ Changes Saved</div>
+      <div class = "savedPopup hidden" id = "savedPopup">☑ Aanpassingen opgeslagen</div>
+      <div class = "sentPopup hidden" id = "sentPopup">☑ Emails verstuurd </div>
       <table id = "bestaandeDagenTable">
         <tr>
           <th>Opleiding</th>
@@ -86,6 +87,10 @@
   <div class = "hidden" id = "mailWindow">
     <textarea rows ="10" cols = "50">Beste,&#13;&#10;U bent van harte welkom om te komen vechten op 24-04-2018 van 10:00 tot 13:00.</textarea>
     <button id = "saveMailButton">Opslaan</button>
+  </div>
+  <div class = "hidden" id = "newMailWindow">
+    <textarea rows ="10" cols = "50" placeholder = "Type your mail here..."></textarea>
+    <button id = "sendMailButton">Verstuur mail</button>
   </div>
   </body>
 </html>
