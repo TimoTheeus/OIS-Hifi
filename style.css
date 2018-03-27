@@ -132,16 +132,31 @@ aside {
 #bestaandeDagenHeader{
     display:inline;
 }
+#mailWindow{
+    position:absolute;
+}
+#saveMailButton{
+    display:block;
+}
 .savedPopup{
-    right:45%;
+    right:50%;
     display:inline;
     position:absolute;
-    font-size: 17px;
+    font-size: 30px;
+    top:30px;
+    border: 1px solid black;
+    background-color: limegreen;
 }
 .success{
     background-color: limegreen;
 }
 .undoButton{
+    cursor:pointer;
+}
+.editButton {
+   cursor:pointer;
+}
+.mailButton{
     cursor:pointer;
 }
 .source {

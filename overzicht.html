@@ -17,7 +17,7 @@
     <nav>
       <ul>
         <li><a class="active" href="overzicht.html">Overzicht Meeloopdagen</a></li>
-        <li><a href="log.html">Event Log</a></li>
+        <li><a href="log.html">Logboek</a></li>
         <li><a href="archief.html">Archief</a></li>
       </ul>
     </nav>
@@ -28,18 +28,18 @@
       <table class = "hidden" id = "meeloopdagTable">
         <tr>
           <td><select name = "opleidingen"><option value = "Informatiekunde">Informatiekunde</option></select></td>
-          <td><input type = "date" required></td>
+          <td><input type = "date"></td>
           <td><input type = "number" placeholder="mailingsperiode (dagen)" ></td>
           <td><input type = "number" placeholder="sluitingsperiode (dagen)" ></td>
           <td><input type = "number" placeholder="herinneringsperiode (dagen)" ></td>
           <td><input type = "number" placeholder="max inschrijvingen" ></td>
-          <td id = "saveElement"><button id= "saveButton">Opslaan</button></td>
+          <td id = "saveElement"><button id= "saveButton">Aanmaken</button></td>
         </tr>
       </table>
     </div>
     <div id = "bestaandeDagenDiv">
     <h2 id = "bestaandeDagenHeader">Bestaande meeloopdagen:</h2>
-      <div class = "hidden savedPopup" id = "savedPopup">☑ Changes Saved</div>
+      <div class = "savedPopup hidden" id = "savedPopup">☑ Changes Saved</div>
       <table id = "bestaandeDagenTable">
         <tr>
           <th>Opleiding</th>
@@ -48,6 +48,8 @@
           <th>Sluitingsperiode</th>
           <th>Herinneringsperiode</th>
           <th>Maximum inschrijvingen</th>
+          <th>Mail aanpassen</th>
+          <th>Extra mail verzenden</th>
         </tr>
         <tr>
           <td><select name = "opleidingen"><option value = "Informatiekunde">Informatiekunde</option></select></td>
@@ -56,6 +58,8 @@
           <td><input type = "number" value = "3"></td>
           <td><input type = "number" value = "3"></td>
           <td><input type = "number" value = "25"></td>
+          <td><button class = "editButton">Bewerk</button></td>
+          <td><button class = "mailButton">Maak mail</button></td>
         </tr>
         <tr>
           <td><select name = "opleidingen"><option value = "Informatiekunde">Informatiekunde</option></select></td>
@@ -64,6 +68,8 @@
           <td><input type = "number" value = "5"></td>
           <td><input type = "number" value = "3"></td>
           <td><input type = "number" value = "15"></td>
+          <td><button class = "editButton">Bewerk</button></td>
+          <td><button class = "mailButton">Maak mail</button></td>
         </tr>
         <tr>
           <td><select name = "opleidingen"><option value = "Informatiekunde">Informatiekunde</option></select></td>
@@ -72,8 +78,14 @@
           <td><input type = "number" value = "5"></td>
           <td><input type = "number" value = "3"></td>
           <td><input type = "number" value = "12"></td>
+          <td><button class = "editButton">Bewerk</button></td>
+          <td><button class = "mailButton">Maak mail</button></td>
         </tr>
       </table>
     </div>
+  <div class = "hidden" id = "mailWindow">
+    <textarea rows ="10" cols = "50">Beste,&#13;&#10;U bent van harte welkom om te komen vechten op 24-04-2018 van 10:00 tot 13:00.</textarea>
+    <button id = "saveMailButton">Opslaan</button>
+  </div>
   </body>
 </html>
