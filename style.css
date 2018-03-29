@@ -68,7 +68,9 @@ table {
 
 td,th {
    border: 1px solid black;
-   padding: 10px;
+   padding:1px;
+   padding-bottom: 10px;
+   padding-top:10px;
 
 }
 
@@ -141,6 +143,20 @@ aside {
 #saveMailButton{
     display:block;
 }
+#removeButton{
+    display:inline;
+    background-color: darkred;
+    color: white;
+    margin-top: 10px;
+    padding:10px;
+}
+#exportButton{
+    display:inline;
+    background-color: darkgreen;
+    color: white;
+    margin-top: 10px;
+    padding:10px;
+}
 .savedPopup{
     right:50%;
     display:inline;
@@ -150,6 +166,9 @@ aside {
     border: 1px solid black;
     background-color: limegreen;
 }
+#loguit{
+
+}
 .sentPopup{
     right:50%;
     display:inline;
@@ -158,6 +177,14 @@ aside {
     top:30px;
     border: 1px solid black;
     background-color: limegreen;
+}
+#englishFlag{
+    width: 30px;
+    height:20px;
+    position: absolute;
+    top: 20px;
+    right: 400px;
+    cursor:pointer;
 }
 .success{
     background-color: limegreen;

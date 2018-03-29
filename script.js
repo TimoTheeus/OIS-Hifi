@@ -37,6 +37,12 @@ $(function() {
     });
     document.getElementById("saveButton").onclick = function () {
         var tr = document.createElement('tr');
+        var td = document.createElement('td');
+        var input = document.createElement('input');
+        input.type = "checkbox";
+        input.name = "checkbox";
+        td.appendChild(input);
+        tr.appendChild(td);
         var children = $('#meeloopdagTable tr').children('td');
         for(i=0;i<children.length-1;i++){
             var td = children[i];
@@ -96,3 +102,28 @@ $(function() {
         }
     }
 });
+function toggle(source) {
+    checkboxes = document.getElementsByName('checkbox');
+    for(var i=0, n=checkboxes.length;i<n;i++) {
+      checkboxes[i].checked = source.checked;
+    }
+  }
+
+function removeSelected(){
+    checkboxes = document.getElementsByName('checkbox');
+    for(var i=0, n=checkboxes.length;i<n;i++) {
+     if(checkboxes[i].checked){
+         checkboxes[i].parentElement.parentElement.remove();
+     }
+    }
+}
+Element.prototype.remove = function() {
+    this.parentElement.removeChild(this);
+}
+NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
+    for(var i = this.length - 1; i >= 0; i--) {
+        if(this[i] && this[i].parentElement) {
+            this[i].parentElement.removeChild(this[i]);
+        }
+    }
+}

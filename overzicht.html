@@ -10,8 +10,9 @@
   <body>
     <header>
       <img src="images/uu.png" alt="uu logo">
+      <img id = "englishFlag" src = "images/englishflag.png" alt = "switch to english">
       <div id = "userHeader">
-        <p>U bent ingelogd als: Kwintijn Schuurman (5123456)<br>Departement: Informatiekunde</p>
+        <p>U bent ingelogd als: Kwintijn Schuurman (5123456)<br>Departement: Informatiekunde <br><a id = "loguit" href = "login.html">Log uit</a></p>
       </div>
     </header>
     <nav>
@@ -43,6 +44,7 @@
       <div class = "sentPopup hidden" id = "sentPopup">☑ Emails verstuurd </div>
       <table id = "bestaandeDagenTable">
         <tr>
+          <th><input type="checkbox" onClick='toggle(this)'/> Selecteer Alles</th>
           <th>Opleiding</th>
           <th>Datum</th>
           <th>Mailingsperiode</th>
@@ -53,6 +55,7 @@
           <th>Extra mail verzenden</th>
         </tr>
         <tr>
+          <td><input  type="checkbox" name = "checkbox"value = "FALSE"/></td>
           <td><select name = "opleidingen"><option value = "Informatiekunde">Informatiekunde</option></select></td>
           <td><input type = "date" value ="2018-02-22"></td>
           <td><input type = "number" value = "7"></td>
@@ -63,6 +66,7 @@
           <td><button class = "mailButton">Maak mail</button></td>
         </tr>
         <tr>
+          <td><input type="checkbox" name = "checkbox"value = "FALSE"/></td>
           <td><select name = "opleidingen"><option value = "Informatiekunde">Informatiekunde</option></select></td>
           <td><input type = "date" value ="2018-03-05"></td>
           <td><input type = "number" value = "14"></td>
@@ -73,6 +77,7 @@
           <td><button class = "mailButton">Maak mail</button></td>
         </tr>
         <tr>
+          <td><input type="checkbox" name = "checkbox" value = "FALSE"/></td>
           <td><select name = "opleidingen"><option value = "Informatiekunde">Informatiekunde</option></select></td>
           <td><input type = "date" value ="2018-03-06"></td>
           <td><input type = "number" value = "14"></td>
@@ -83,6 +88,8 @@
           <td><button class = "mailButton">Maak mail</button></td>
         </tr>
       </table>
+      <button id = "exportButton">Exporteer geselecteerde dagen naar Excel</button>
+      <button id = "removeButton" onclick = "removeSelected()">Verwijder geselecteerde meeloopdagen</button>
     </div>
   <div class = "hidden" id = "mailWindow">
     <textarea rows ="10" cols = "50">Beste,&#13;&#10;U bent van harte welkom om te komen vechten op 24-04-2018 van 10:00 tot 13:00.</textarea>
