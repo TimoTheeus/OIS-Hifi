@@ -111,7 +111,7 @@ function toggle(source) {
 
 function removeSelected(){
     checkboxes = document.getElementsByName('checkbox');
-    for(var i=0, n=checkboxes.length;i<n;i++) {
+    for(var i=checkboxes.length-1;i>=0;i--) {
      if(checkboxes[i].checked){
          checkboxes[i].parentElement.parentElement.remove();
      }
