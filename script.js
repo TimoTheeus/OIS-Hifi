@@ -53,6 +53,10 @@ $(function() {
             var clone = td.cloneNode(true);
             tr.appendChild(clone);
         }
+        //add inschrijvingen
+        var inschrijvingen = document.createElement('td');
+        inschrijvingen.append('0');
+        tr.appendChild(inschrijvingen);
         //add mail buttons
         var editButton = document.createElement('button');
         editButton.className+="editButton";
@@ -66,10 +70,7 @@ $(function() {
         var td = document.createElement('td');
         td.appendChild(mailButton);
         tr.appendChild(td);
-        //add inschrijvingen
-        var inschrijvingen = document.createElement('td');
-        inschrijvingen.append('0');
-        tr.appendChild(inschrijvingen);
+        
         tr.className+= "success";
         setTimeout(function(){
             tr.classList.remove("success");
