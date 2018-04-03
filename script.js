@@ -66,7 +66,10 @@ $(function() {
         var td = document.createElement('td');
         td.appendChild(mailButton);
         tr.appendChild(td);
-
+        //add inschrijvingen
+        var inschrijvingen = document.createElement('td');
+        inschrijvingen.append('0');
+        tr.appendChild(inschrijvingen);
         tr.className+= "success";
         setTimeout(function(){
             tr.classList.remove("success");
@@ -81,6 +84,7 @@ $(function() {
         }
     }
     document.onclick = function (e) {
+        
         if(e.target.tagName=="INPUT"){
                 inputActive = true;
         }
@@ -116,6 +120,9 @@ function removeSelected(){
          checkboxes[i].parentElement.parentElement.remove();
      }
     }
+}
+function cancel(){
+    $("#newMailWindow").toggleClass("hidden");
 }
 Element.prototype.remove = function() {
     this.parentElement.removeChild(this);
