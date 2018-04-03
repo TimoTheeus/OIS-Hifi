@@ -66,14 +66,22 @@ table {
     border-collapse: collapse;
 }
 
+#verstuurdOverzicht{
+    position:absolute; background:white; 
+}
 td,th {
    border: 1px solid black;
    padding:1px;
    padding-bottom: 10px;
    padding-top:10px;
-
 }
-
+#verstuurdOverzicht{
+    border:1px solid black;
+    width: 200px;
+}
+#jelle{
+    color:red;
+}
 th {
     background-color: #4CAF50;
     color:white;
