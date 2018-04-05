@@ -29,6 +29,13 @@
       <table class = "hidden" id = "meeloopdagTable">
         <tr>
           <td><select name = "opleidingen"><option value = "Informatiekunde">Informatiekunde</option></select></td>
+          <td>
+            <select name = "programma">
+              <option value = "Ochtend">Ochtend</option>
+              <option value = "Middag">Middag</option>
+              <option value = "Hele Dag">Hele Dag</option>
+            </select>
+          </td>
           <td><input type = "date"></td>
           <td><input type = "number" placeholder="mailingsperiode (dagen)" ></td>
           <td><input type = "number" placeholder="sluitingsperiode (dagen)" ></td>
@@ -44,8 +51,9 @@
       <div class = "sentPopup hidden" id = "sentPopup">☑ Emails verstuurd </div>
       <table id = "bestaandeDagenTable">
         <tr>
-          <th><input type="checkbox" onClick='toggle(this)'/> Selecteer Alles</th>
+          <th><input type="checkbox" onClick='toggle(this)'/> Selecteer<br> Alles</th>
           <th>Opleiding</th>
+          <th>Programma</th>
           <th>Datum</th>
           <th>Mailingsperiode<br>(dagen)</th>
           <th>Sluitingsperiode<br>(dagen)</th>
@@ -58,6 +66,13 @@
         <tr>
           <td><input  type="checkbox" name = "checkbox"value = "FALSE"/></td>
           <td><select name = "opleidingen"><option value = "Informatiekunde">Informatiekunde</option></select></td>
+          <td>
+            <select name = "programma">
+              <option value = "Ochtend">Ochtend</option>
+              <option value = "Middag">Middag</option>
+              <option selected value = "Hele Dag">Hele Dag</option>
+            </select>
+          </td>
           <td><input type = "date" value ="2018-02-22"></td>
           <td><input type = "number" value = "7"></td>
           <td><input type = "number" value = "3"></td>
@@ -70,6 +85,13 @@
         <tr>
           <td><input type="checkbox" name = "checkbox"value = "FALSE"/></td>
           <td><select name = "opleidingen"><option value = "Informatiekunde">Informatiekunde</option></select></td>
+          <td>
+            <select name = "programma">
+              <option value = "Ochtend">Ochtend</option>
+              <option selected value = "Middag">Middag</option>
+              <option value = "Hele Dag">Hele Dag</option>
+            </select>
+          </td>
           <td><input type = "date" value ="2018-03-05"></td>
           <td><input type = "number" value = "14"></td>
           <td><input type = "number" value = "5"></td>
@@ -82,6 +104,13 @@
         <tr>
           <td><input type="checkbox" name = "checkbox" value = "FALSE"/></td>
           <td><select name = "opleidingen"><option value = "Informatiekunde">Informatiekunde</option></select></td>
+          <td>
+            <select name = "programma">
+              <option selected value = "Ochtend">Ochtend</option>
+              <option value = "Middag">Middag</option>
+              <option value = "Hele Dag">Hele Dag</option>
+            </select>
+          </td>
           <td><input type = "date" value ="2018-03-06"></td>
           <td><input type = "number" value = "14"></td>
           <td><input type = "number" value = "5"></td>
@@ -96,7 +125,7 @@
       <button id = "removeButton" onclick = "removeSelected()">Verwijder geselecteerde meeloopdagen</button>
     </div>
   <div class = "hidden" id = "mailWindow">
-    <textarea rows ="10" cols = "50">Beste,&#13;&#10;U bent van harte welkom om te komen vechten op 24-04-2018 van 10:00 tot 13:00.</textarea>
+    <textarea rows ="10" cols = "50">Beste,&#13;&#10;U bent van harte welkom om een dag mee te lopen op [datum] van 10:00 tot 13:00.&#13;&#10;&#13;&#10;Mvg,&#13;&#10;Kwintijn </textarea>
     <button id = "saveMailButton">Opslaan</button>
   </div>
   <div class = "hidden" id = "newMailWindow">

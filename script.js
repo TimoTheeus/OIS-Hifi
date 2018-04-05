@@ -50,7 +50,11 @@ $(function() {
                 alert("Please fill in all the required fields");
                 return;
             }
+
             var clone = td.cloneNode(true);
+            if(td.children[0].tagName=='SELECT'){
+                clone.children[0].value = td.children[0].value;
+            }
             tr.appendChild(clone);
         }
         //add inschrijvingen
