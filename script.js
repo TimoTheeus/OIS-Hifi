@@ -24,14 +24,16 @@ $(function() {
     $(document).on('click','.editButton',function(e){
         if($("#mailWindow").hasClass("hidden")) {
             $("#mailWindow").toggleClass("hidden");
-            document.getElementById("mailWindow").style.left = e.clientX + 'px';
+            $("#newMailWindow").addClass('hidden');
+            document.getElementById("mailWindow").style.left = e.clientX -250 + 'px';
             document.getElementById("mailWindow").style.top = e.clientY + 'px';
         }
     });
     $(document).on('click','.mailButton',function(e){
         if($("#newMailWindow").hasClass("hidden")) {
+            $("#mailWindow").addClass('hidden');
             $("#newMailWindow").toggleClass("hidden");
-            document.getElementById("newMailWindow").style.left = e.clientX + 'px';
+            document.getElementById("newMailWindow").style.left = e.clientX-340 + 'px';
             document.getElementById("newMailWindow").style.top = e.clientY + 'px';
         }
     });
@@ -93,7 +95,7 @@ $(function() {
         if(e.target.tagName=="INPUT"){
                 inputActive = true;
         }
-        if(e.target.id=="saveButton"){
+        if(e.target.id=="saveButton" || e.target.id == "cancel2"){
             return;
         }
         if(!inputActive &&e.target.tagName!="BUTTON"&& !$('.savedPopup').hasClass("hidden")){
@@ -127,7 +129,8 @@ function removeSelected(){
     }
 }
 function cancel(){
-    $("#newMailWindow").toggleClass("hidden");
+    $("#newMailWindow").addClass("hidden");
+    $("#mailWindow").addClass("hidden");
 }
 Element.prototype.remove = function() {
     this.parentElement.removeChild(this);

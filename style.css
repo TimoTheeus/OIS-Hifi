@@ -7,7 +7,7 @@ header {
 }
 
 body {
-    
+
 }
 nav {
     position: sticky;
@@ -17,6 +17,11 @@ nav {
     width:100%;
 }
 
+.presentlist{
+    border: 1px solid black;
+    background:white;
+    position:absolute;
+}
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -31,27 +36,33 @@ nav li {
 nav li:last-child {
     border-right: none;
 }
-
+button{
+    border:none;
+    padding:5px;
+    cursor:pointer;
+}
 nav li a {
     display: block;
     padding: 10px;
-    color: white;
-    background-color: black;
+    color: black;
+    background-color: #ffcd00;
     font-size: 17px;
     font-family: "Lucida Console", Monaco, monospace;
     text-decoration: none;
 }
 
 nav li a:hover {
-    background-color: #808080;
+    background-color: black;
+    color:#ffcd00;
     text-decoration: underline;
 }
 
 nav li a.active {
-    background-color: whitesmoke;
+    background-color: #ffcd00;
     text-decoration: none;
     cursor: default;
     color:black;
+    font-weight: bold;
 }
 
 article { 
@@ -83,8 +94,9 @@ td,th {
     color:red;
 }
 th {
-    background-color: #4CAF50;
+    background-color: #ffcd00;
     color:white;
+    color:black;
 }
 
 tr:hover {
@@ -148,9 +160,13 @@ aside {
 #newMailWindow{
     position:absolute;
 }
-#saveMailButton{
+#buttons2{
     display:block;
 }
+#buttons{
+    display:block;
+}
+
 #removeButton{
     display:inline;
     background-color: darkred;

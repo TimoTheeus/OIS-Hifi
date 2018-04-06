@@ -28,7 +28,7 @@
     </button>
       <table class = "hidden" id = "meeloopdagTable">
         <tr>
-          <td><select name = "opleidingen"><option value = "Informatiekunde">Informatiekunde</option></select></td>
+          <td><select name = "opleidingen" disabled><option value = "Informatiekunde">Informatiekunde</option></select></td>
           <td>
             <select name = "programma">
               <option value="" selected disabled hidden>Kies programma hier....</option>
@@ -66,7 +66,7 @@
         </tr>
         <tr>
           <td><input  type="checkbox" name = "checkbox"value = "FALSE"/></td>
-          <td><select name = "opleidingen"><option value = "Informatiekunde">Informatiekunde</option></select></td>
+          <td><select name = "opleidingen" disabled><option value = "Informatiekunde">Informatiekunde</option></select></td>
           <td>
             <select name = "programma">
               <option value = "Ochtend">Ochtend</option>
@@ -85,7 +85,7 @@
         </tr>
         <tr>
           <td><input type="checkbox" name = "checkbox"value = "FALSE"/></td>
-          <td><select name = "opleidingen"><option value = "Informatiekunde">Informatiekunde</option></select></td>
+          <td><select name = "opleidingen" disabled><option value = "Informatiekunde">Informatiekunde</option></select></td>
           <td>
             <select name = "programma">
               <option value = "Ochtend">Ochtend</option>
@@ -104,7 +104,7 @@
         </tr>
         <tr>
           <td><input type="checkbox" name = "checkbox" value = "FALSE"/></td>
-          <td><select name = "opleidingen"><option value = "Informatiekunde">Informatiekunde</option></select></td>
+          <td><select name = "opleidingen" disabled><option value = "Informatiekunde">Informatiekunde</option></select></td>
           <td>
             <select name = "programma">
               <option selected value = "Ochtend">Ochtend</option>
@@ -127,12 +127,17 @@
     </div>
   <div class = "hidden" id = "mailWindow">
     <textarea rows ="10" cols = "50">Beste,&#13;&#10;U bent van harte welkom om een dag mee te lopen op [datum] van 10:00 tot 13:00.&#13;&#10;&#13;&#10;Mvg,&#13;&#10;Kwintijn </textarea>
+    <div id = "buttons2">
     <button id = "saveMailButton">Opslaan</button>
+    <button id = "cancel2" onclick = 'cancel()'>Annuleer</button>
+    </div>
   </div>
   <div class = "hidden" id = "newMailWindow">
     <textarea rows ="10" cols = "50" placeholder = "Type your mail here..."></textarea>
+    <div id = "buttons">
     <button id = "sendMailButton">Verstuur mail</button>
     <button id = "cancel" onclick = 'cancel()'>Annuleer</button>
+    </div>
   </div>
   </body>
 </html>
