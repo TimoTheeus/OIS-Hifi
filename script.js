@@ -21,6 +21,31 @@ $(function() {
             },2000);
         }
     });
+    $('.trashCan').on('click',function(e){
+        e.target.parentElement.parentElement.parentElement.children[0].innerHTML-=1;
+        e.target.parentElement.remove();
+    });
+    $("#link1").on('click',function(e){
+        document.getElementById("list1").style.left = e.clientX + 'px';
+        document.getElementById("list1").style.top = e.clientY + 'px';
+        $("#list1").toggleClass("hidden");
+        $("#list2").addClass('hidden');
+        $("#list3").addClass('hidden');
+    });
+    $("#link2").on('click',function(e){
+        document.getElementById("list2").style.left = e.clientX + 'px';
+        document.getElementById("list2").style.top = e.clientY + 'px';
+        $("#list2").toggleClass("hidden");
+        $("#list1").addClass('hidden');
+        $("#list3").addClass('hidden');
+    });
+    $("#link3").on('click',function(e){
+        document.getElementById("list3").style.left = e.clientX + 'px';
+        document.getElementById("list3").style.top = e.clientY + 'px';
+        $("#list3").toggleClass("hidden");
+        $("#list2").addClass('hidden');
+        $("#list1").addClass('hidden');
+    });
     $(document).on('click','.editButton',function(e){
         if($("#mailWindow").hasClass("hidden")) {
             $("#mailWindow").toggleClass("hidden");
@@ -61,7 +86,10 @@ $(function() {
         }
         //add inschrijvingen
         var inschrijvingen = document.createElement('td');
-        inschrijvingen.append('0');
+        var link = document.createElement('a');
+        link.href = 'javascript:void(0);';
+        link.append(0);
+        inschrijvingen.appendChild(link);
         tr.appendChild(inschrijvingen);
         //add mail buttons
         var editButton = document.createElement('button');
