@@ -22,8 +22,10 @@ $(function() {
         }
     });
     $('.trashCan').on('click',function(e){
-        e.target.parentElement.parentElement.parentElement.children[0].innerHTML-=1;
-        e.target.parentElement.remove();
+        if (confirm("Verwijder inschrijving?")) {
+            e.target.parentElement.parentElement.parentElement.children[0].innerHTML -= 1;
+            e.target.parentElement.remove();
+        }
     });
     $("#link1").on('click',function(e){
         document.getElementById("list1").style.left = e.clientX + 'px';
@@ -149,11 +151,13 @@ function toggle(source) {
   }
 
 function removeSelected(){
+    if (confirm("Verwijder geselecteerde inschrijvingen?")){
     checkboxes = document.getElementsByName('checkbox');
     for(var i=checkboxes.length-1;i>=0;i--) {
      if(checkboxes[i].checked){
          checkboxes[i].parentElement.parentElement.remove();
      }
+    }
     }
 }
 function cancel(){
